@@ -1,24 +1,44 @@
 # Agent Foundation Specification
 
-MrCakes931 Agent Intelligence Ecosystem · Foundation layer
+**MrCakes931 Agent Intelligence Ecosystem · Foundation layer**
 
-Defines the shared, technology-neutral requirements and invariants consumed by the ecosystem's other repositories.
+Defines the shared, technology-neutral requirements and invariants consumed by the ecosystem's other repositories. It is the baseline for security, interoperability, reliability, lifecycle, and engineering discipline.
 
 ## Scope
-- Normative baseline requirements with stable identifiers.
-- Trust boundaries, least privilege, deny-by-default authorization, and fail-closed behavior.
-- Versioned contracts, provenance, and distributed-systems reliability requirements.
-- Traceability from requirement to design decision, implementation, test, and verification.
+- Normative requirements with stable identifiers and MUST / SHOULD / MAY priority.
+- Trust-boundary, least-privilege, and fail-closed invariants.
+- Versioning, compatibility, provenance, and distributed-systems expectations.
+- Traceability from requirement to architecture decision, implementation, test, and verification.
 
-## Current status
-Scaffolded, version 0.1.0. The initial requirement set is published in [requirements/requirements.json](requirements/requirements.json), with rationale in [docs/FOUNDATION-CONTRACT.md](docs/FOUNDATION-CONTRACT.md). This is not a certification of downstream implementations.
+## Layout
+- requirements/requirements.json — machine-readable requirement catalog.
+- docs/FOUNDATION-CONTRACT.md — normative principles and change process.
+- tools/validate_requirements.py — standard-library validator.
+- tests/ — automated validator tests.
+- .github/workflows/validate.yml — CI validation.
+- AGENTS.md — AI and contributor operating instructions.
+
+## Validate locally
+Requires Python 3.10+; no third-party packages are needed.
+
+    python tools/validate_requirements.py
+    python -m unittest discover -s tests -v
+
+## Design invariants
+1. Identify and validate all trust-boundary inputs.
+2. Default to deny; authorization failures fail closed.
+3. Version published interfaces and document breaking changes.
+4. Preserve provenance; a hash proves byte equality against a trusted reference, not truth or completeness.
+5. Design distributed execution around idempotency, bounded retries, and partial failure—not exactly-once claims.
+6. Require human review for consequential decisions.
+
+## Status and governance
+Scaffolded, v0.1.0. The initial requirements are published and validated by CI. This does not certify downstream implementations. Normative changes require rationale, compatibility impact assessment, affected-repository review, and tests.
 
 ## Ecosystem
-- Master registry: https://github.com/PCakes303/agent-intelligence-ecosystem
-- Main public identity: https://github.com/HuffmanMainNode
+Master registry: https://github.com/PCakes303/agent-intelligence-ecosystem
 
-## Governance
-Normative changes require rationale, compatibility impact assessment, affected-repository review, and tests. The master repository tracks ecosystem dependencies; this repository owns its foundation contract.
+Main public identity: https://github.com/HuffmanMainNode
 
 ## License
 Apache-2.0.
