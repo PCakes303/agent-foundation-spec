@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "repository": "agent-foundation-spec",
+  "capabilities": [
+    {
+      "id": "foundation.requirements",
+      "status": "scaffolded",
+      "description": "Machine-readable foundational requirements."
+    },
+    {
+      "id": "foundation.invariants",
+      "status": "planned",
+      "description": "Cross-repository invariants and design constraints."
+    }
+  ]
+}
