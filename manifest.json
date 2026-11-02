@@ -1,0 +1,9 @@
+{
+  "name": "agent-foundation-spec",
+  "version": "0.1.0",
+  "status": "scaffolded",
+  "license": "Apache-2.0",
+  "description": "Normative baseline requirements and shared contracts.",
+  "ecosystem_master": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+  "main_public_identity": "https://github.com/HuffmanMainNode"
+}
