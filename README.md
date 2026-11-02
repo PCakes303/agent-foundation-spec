@@ -35,6 +35,15 @@ Requires Python 3.10+; no third-party packages are needed.
 ## Status and governance
 Scaffolded, v0.1.0. The initial requirements are published and validated by CI. This does not certify downstream implementations. Normative changes require rationale, compatibility impact assessment, affected-repository review, and tests.
 
+## Entry-level build
+
+Start with the runnable starter build:
+
+    python tools/starter_build.py
+    python -m unittest discover -s tests -v
+
+See [Entry-level build guide](docs/ENTRY-LEVEL-BUILD.md) for Starter → Developer → Production progression.
+
 ## Ecosystem
 Master registry: https://github.com/PCakes303/agent-intelligence-ecosystem
 
