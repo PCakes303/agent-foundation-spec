@@ -2,7 +2,7 @@
 
 **MrCakes931 Agent Intelligence Ecosystem · Foundation layer**
 
-Defines the shared, technology-neutral requirements and invariants consumed by the ecosystem's other repositories. It is the baseline for security, interoperability, reliability, lifecycle, and engineering discipline.
+Defines shared, technology-neutral requirements and invariants consumed by the ecosystem's other repositories. It is the baseline for security, interoperability, reliability, lifecycle, and engineering discipline.
 
 ## Scope
 - Normative requirements with stable identifiers and MUST / SHOULD / MAY priority.
