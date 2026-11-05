@@ -20,7 +20,13 @@
       "stability": "draft"
     }
   ],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "master",
+      "constraint": "*",
+      "kind": "contract"
+    }
+  ],
   "security": {
     "threat_model": "See SECURITY.md. Treat external inputs, manifests, events, and referenced artifacts as untrusted until independently validated.",
     "secrets_in_repository": false,
